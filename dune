@@ -1,0 +1,19 @@
+(dirs packages)
+
+(melange.emit
+ (target client)
+ (modules client)
+ (libraries
+  pure_library
+  url_same_interface_with_2_implementations
+  library_using_a_shared_library
+  promise_different_interface_with_2_dependencies))
+
+(executable
+ (name server)
+ (modules server)
+ (libraries
+  pure_library
+  url_same_interface_with_2_implementations
+  library_using_a_shared_library
+  promise_different_interface_with_2_dependencies))

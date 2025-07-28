@@ -1,0 +1,14 @@
+(library
+ (name url_same_interface_with_2_implementations)
+ (modules :standard \ Test)
+ (modes :standard melange)
+ (wrapped false)
+ (libraries uri)
+ (melange.libraries melange.js)
+ (melange.preprocess
+  (pps melange.ppx)))
+
+(test
+ (name Test)
+ (modules Test)
+ (libraries alcotest url_same_interface_with_2_implementations))

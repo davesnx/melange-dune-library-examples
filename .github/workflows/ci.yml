@@ -1,0 +1,79 @@
+name: CI
+
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+
+env:
+  OPAM_VERSION: 2.3.0
+  DUNE_PROFILE: release
+  OCAMLRUNPARAM: b
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+defaults:
+  run:
+    shell: bash -xeuo pipefail {0}
+
+jobs:
+  build:
+    name: Build and test
+
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - macos-latest
+          - ubuntu-latest
+          # - windows-latest
+        ocaml-compiler:
+          - 5.2.0
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use OCaml ${{ matrix.ocaml-compiler }}
+        uses: ocaml/setup-ocaml@v3.2.5
+        with:
+          ocaml-compiler: ${{ matrix.ocaml-compiler }}
+          dune-cache: false
+          opam-disable-sandboxing: true
+
+      - name: Install opam deps
+        run: make install
+
+      - name: Pin dependencies
+        run: make pin
+
+      - name: Build
+        run: make build
+
+      - name: Check formatting
+        run: make format-check
+
+#       - name: Run tests
+#         run: make test
+#
+#       - name: Generate docs
+#         if: github.ref == 'refs/heads/main'
+#         run: make docs
+#
+#       - name: Publish docs
+#          uses: crazy-max/ghaction-github-pages@v1
+#          if: github.ref == 'refs/heads/main'
+#         with:
+#           target_branch: gh-pages
+#           build_dir: _html
+#         env:
+#          GITHUB_TOKEN: ${{ github.token }}

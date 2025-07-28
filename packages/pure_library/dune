@@ -1,0 +1,3 @@
+(library
+ (name pure_library)
+ (modes :standard melange))
