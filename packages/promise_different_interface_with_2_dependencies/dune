@@ -6,4 +6,7 @@
 (library
  (name promise_different_interface_with_2_dependencies)
  (wrapped false)
- (modes :standard melange))
+ (modes :standard melange)
+ (melange.libraries melange.belt)
+ (melange.preprocess
+  (pps melange.ppx)))
