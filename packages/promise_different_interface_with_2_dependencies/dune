@@ -1,3 +1,8 @@
+; Different implementations, separate modules (`Promise.re`, `Promise.melange.re`)
+; Different dependencies (`lwt`, `melange.belt melange.js`)
+; Different preprocess (`lwt_ppx`, `melange.ppx`)
+; Different interface (`Promise.rei`, `Promise.melange.rei`)
+
 (library
  (name promise_different_interface_with_2_dependencies)
  (wrapped false)

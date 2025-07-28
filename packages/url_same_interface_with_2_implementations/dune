@@ -1,3 +1,7 @@
+; Different implementations, separate modules (`URL.re`, `URL.melange.re`)
+; Different dependencies (`uri`, `melange.js`)
+; Same `URL.rei`
+
 (library
  (name url_same_interface_with_2_implementations)
  (modules :standard \ Test)

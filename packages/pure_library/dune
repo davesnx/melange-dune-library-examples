@@ -1,3 +1,6 @@
+; Same implementations: singular files
+; No dependencies aside from Stdlib (implicitly in dune)
+
 (library
  (name pure_library)
  (modes :standard melange))

@@ -1,3 +1,6 @@
+; Same implementation: singulgar file
+; Dependency from a shared library (url_same_interface_with_2_implementations)
+
 (library
  (name library_using_a_shared_library)
  (modes :standard melange)
