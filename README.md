@@ -1,4 +1,6 @@
-# Kinds of libraries with dune and melange
+# Kinds of shared libraries with dune and melange
+
+This repository demonstrates various patterns and implementations for creating shared libraries with dune and melange. It's a collection of minimalistic but real-world examples, extracted and adapted from server-reason-react repo.
 
 ## Pure library
 

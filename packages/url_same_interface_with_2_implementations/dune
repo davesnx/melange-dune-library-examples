@@ -7,10 +7,7 @@
  (modules :standard \ Test)
  (modes :standard melange)
  (wrapped false)
- (libraries uri)
- (melange.libraries melange.js)
- (melange.preprocess
-  (pps melange.ppx)))
+ (libraries uri))
 
 (test
  (name Test)

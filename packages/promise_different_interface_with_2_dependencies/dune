@@ -6,10 +6,4 @@
 (library
  (name promise_different_interface_with_2_dependencies)
  (wrapped false)
- (modes :standard melange)
- (libraries lwt)
- (preprocess
-  (pps lwt_ppx))
- (melange.libraries melange.belt melange.js)
- (melange.preprocess
-  (pps melange.ppx)))
+ (modes :standard melange))
