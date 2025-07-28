@@ -47,10 +47,6 @@ format: ## Format the codebase with ocamlformat
 format-check: ## Checks if format is correct
 	@DUNE_CONFIG__GLOBAL_LOCK=disabled $(DUNE) build @fmt
 
-.PHONY: init
-setup-githooks: ## Setup githooks
-	git config core.hooksPath .githooks
-
 .PHONY: create-switch
 create-switch: ## Create opam switch
 	opam switch create . 5.2.0 --deps-only --with-test -y
