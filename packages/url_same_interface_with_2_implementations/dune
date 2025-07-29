@@ -4,6 +4,7 @@
 
 (library
  (name url_same_interface_with_2_implementations)
+ (public_name melange-dune-library-examples.url)
  (modules :standard \ Test)
  (modes :standard melange)
  (wrapped false)

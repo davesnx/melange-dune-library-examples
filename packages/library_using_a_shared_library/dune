@@ -3,5 +3,6 @@
 
 (library
  (name library_using_a_shared_library)
+ (public_name melange-dune-library-examples.main)
  (modes :standard melange)
  (libraries url_same_interface_with_2_implementations))

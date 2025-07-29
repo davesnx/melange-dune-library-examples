@@ -20,7 +20,6 @@
 (package
  (name melange-dune-library-examples)
  (synopsis "melange-dune-library-examples")
- (allow_empty)
  (depends
   ; General system dependencies
   (ocaml (>= 4.14.1))

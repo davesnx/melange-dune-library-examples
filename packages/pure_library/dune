@@ -3,4 +3,5 @@
 
 (library
  (name pure_library)
+ (public_name melange-dune-library-examples.html)
  (modes :standard melange))

@@ -43,6 +43,14 @@ test-promote: ## Updates snapshots and promotes it to correct
 format: ## Format the codebase with ocamlformat
 	@DUNE_CONFIG__GLOBAL_LOCK=disabled $(DUNE) build @fmt --auto-promote
 
+.PHONY: docs
+docs: ## Build the documentation
+	$(DUNE) build @doc
+
+.PHONY: docs-open
+docs-open: ## Open the documentation
+	open _build/default/_doc/_html/index.html
+
 .PHONY: format-check
 format-check: ## Checks if format is correct
 	@DUNE_CONFIG__GLOBAL_LOCK=disabled $(DUNE) build @fmt

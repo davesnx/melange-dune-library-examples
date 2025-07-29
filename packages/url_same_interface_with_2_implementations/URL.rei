@@ -1,8 +1,9 @@
 /**
- [URL] module is universal and has 2 implementations with the same API:
+ [URL] module is universal and has 2 implementations with the same API.
 
-  - [url_js] library is a wrapper around the [URL] API in the browser binded with Melange.
-  - [url_native] library is a native implementation with {{:https://github.com/mirage/ocaml-uri}ocaml-uri} (RFC3986 URI parsing library for OCaml).
+   - Native is implemented with {{:https://github.com/mirage/ocaml-uri}ocaml-uri} (RFC3986 URI parsing library for OCaml).
+
+  - Melange is implemented with bindings to the [URL] API in the browser.
 
   {1 Setup with dune}
 
@@ -12,18 +13,18 @@
   (library
     (name ...)
     (modes melange)
-    (libraries (server-reason-react.url_js))
+    (libraries (melange-dune-library-examples.url))
 
   (library
     (name ...)
     (modes native)
-    (libraries (server-reason-react.url_native))
+    (libraries (melange-dune-library-examples.url))
   ]}
 
   {1 Usage}
 
   {[
-      let url = URL.make("https://example.com:8080/path?query=1#hash");
+      let url = URL.makeExn("https://example.com:8080/path?query=1#hash");
       URL.protocol(url); (* => Some("https:") *)
       URL.hostname(url); (* => "example.com" *)
       URL.port(url); (* => Some("8080") *)
