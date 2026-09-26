@@ -1,6 +1,6 @@
 project_name = melange-dune-library-examples
 
-DUNE = opam exec -- dune
+DUNE ?= dune
 opam_file = $(project_name).opam
 
 .PHONY: help
@@ -57,16 +57,12 @@ format-check: ## Checks if format is correct
 
 .PHONY: create-switch
 create-switch: ## Create opam switch
-	opam switch create . 5.2.0 --deps-only --with-test -y
+	opam switch create . 5.5.1 --deps-only --with-test -y
 
 .PHONY: install
 install:
 	opam install . --deps-only --with-test --with-doc --with-dev-setup -y
 
-.PHONY: pin
-pin: ## Pin dependencies
-	opam pin add dune.dev "https://github.com/anmonteiro/dune.git#8e57dbf7798401a76d9495bdf2b70e947820c693" -y
-
 .PHONY: init
-init: setup-githooks create-switch pin install install-npm ## Create a local dev enviroment
-
+init: create-switch ## Create a local opam development environment
+	$(MAKE) install

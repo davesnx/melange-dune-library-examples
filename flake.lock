@@ -1,0 +1,231 @@
+{
+  "nodes": {
+    "dune": {
+      "inputs": {
+        "melange": [
+          "melange"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "ocaml-trunk": "ocaml-trunk",
+        "revdeps-dune": "revdeps-dune"
+      },
+      "locked": {
+        "lastModified": 1790406199,
+        "narHash": "sha256-1L97qXZRgZzocqFPnMqRrNlNRLgGBdUOajSD6F2e+EY=",
+        "owner": "anmonteiro",
+        "repo": "dune",
+        "rev": "91266f46a0597c6da15f76ccc2a0466cb5c9dd4c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "anmonteiro",
+        "ref": "anmonteiro/editor-mode-prototype",
+        "repo": "dune",
+        "type": "github"
+      }
+    },
+    "flake-utils": {
+      "inputs": {
+        "systems": "systems"
+      },
+      "locked": {
+        "lastModified": 1731533236,
+        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "melange": {
+      "inputs": {
+        "melange-compiler-libs": "melange-compiler-libs",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1788141478,
+        "narHash": "sha256-jGs+7AAm8bgD7ZAHT1K9JWhjEAKzwT9I+v8sY5Q9Ob4=",
+        "owner": "melange-re",
+        "repo": "melange",
+        "rev": "a8d215076ae10e26e95d2fc539d209ac4b927b31",
+        "type": "github"
+      },
+      "original": {
+        "owner": "melange-re",
+        "ref": "v7-55",
+        "repo": "melange",
+        "type": "github"
+      }
+    },
+    "melange-compiler-libs": {
+      "inputs": {
+        "nixpkgs": [
+          "melange",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1783838866,
+        "narHash": "sha256-6WDLbI7JSXTCFCj3oVqREtU8/c0D+92ULZUR0OrjLxE=",
+        "owner": "melange-re",
+        "repo": "melange-compiler-libs",
+        "rev": "1a75cd25bb0816c047941be084bf5f9527cbbf05",
+        "type": "github"
+      },
+      "original": {
+        "owner": "melange-re",
+        "ref": "5.5",
+        "repo": "melange-compiler-libs",
+        "type": "github"
+      }
+    },
+    "merlin": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1790404881,
+        "narHash": "sha256-RceCdiSkjvDKjQSGsHaQpl1BojiidDRVDwsLtyl7Aao=",
+        "owner": "anmonteiro",
+        "repo": "merlin",
+        "rev": "302804b0374ada095b7da15574bb9d63908cfddd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "anmonteiro",
+        "ref": "anmonteiro/editor-mode-prototype",
+        "repo": "merlin",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1790444930,
+        "narHash": "sha256-XlB2mGEYOaEGRgAnoMO8Yeluclm7/79uaBiziBDGua8=",
+        "owner": "nix-ocaml",
+        "repo": "nix-overlays",
+        "rev": "95af44d1febadffff73ac2e0e38e758fe3e1f004",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-ocaml",
+        "repo": "nix-overlays",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1790406335,
+        "narHash": "sha256-AERkR3boxGJEFjgW8R8gQ7MxJws2asPI0CUxaVXjQ8U=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "36bebc5639fda7c20265de714291da8b628475ee",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "36bebc5639fda7c20265de714291da8b628475ee",
+        "type": "github"
+      }
+    },
+    "ocaml-lsp": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "merlin": [
+          "merlin"
+        ],
+        "nixpkgs": [
+          "nixpkgs",
+          "nixpkgs"
+        ],
+        "ocaml-overlays": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1790410949,
+        "narHash": "sha256-YUA3OzQyn4nLSbU92ew5DynuFiljAelaQ6wFMved0pI=",
+        "owner": "anmonteiro",
+        "repo": "ocaml-lsp",
+        "rev": "f0a378095f8f096e26c1726684f411d3fe0cc95c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "anmonteiro",
+        "ref": "anmonteiro/editor-mode-prototype",
+        "repo": "ocaml-lsp",
+        "type": "github"
+      }
+    },
+    "ocaml-trunk": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1788513768,
+        "narHash": "sha256-L1sb1UZ3QccO8CVsVwA13PO9+mZmU9Td9hufSXrjllY=",
+        "owner": "ocaml",
+        "repo": "ocaml",
+        "rev": "70165ff23e58ebde4e50bae2c1f9948dbe43ee41",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ocaml",
+        "ref": "trunk",
+        "repo": "ocaml",
+        "type": "github"
+      }
+    },
+    "revdeps-dune": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1788571863,
+        "narHash": "sha256-W3KEgoG23C8inS8EWf9DNDn9cD/kAv/VOUcTePiunJ8=",
+        "owner": "ocaml",
+        "repo": "dune",
+        "rev": "22ec48170fb680541ea4c0bfc00753f52a2a9ba3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ocaml",
+        "repo": "dune",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "dune": "dune",
+        "melange": "melange",
+        "merlin": "merlin",
+        "nixpkgs": "nixpkgs",
+        "ocaml-lsp": "ocaml-lsp"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

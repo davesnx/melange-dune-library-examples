@@ -4,5 +4,7 @@
 (library
  (name library_using_a_shared_library)
  (modes :standard melange)
- (libraries pure_library promise_different_interface_with_2_dependencies
+ (libraries
+  pure_library
+  promise_different_interface_with_2_dependencies
   url_same_interface_with_2_implementations))
