@@ -1,0 +1,11 @@
+pin-depends: [
+  ["dune.3.24.0+editor-mode" "git+https://github.com/anmonteiro/dune.git#anmonteiro/editor-mode-prototype"]
+  ["melange.7.0.0+editor-mode" "git+https://github.com/melange-re/melange.git#v7-55"]
+  ["merlin.5.8.0+editor-mode" "git+https://github.com/anmonteiro/merlin.git#anmonteiro/editor-mode-prototype"]
+  ["merlin-lib.5.8.0+editor-mode" "git+https://github.com/anmonteiro/merlin.git#anmonteiro/editor-mode-prototype"]
+  ["dot-merlin-reader.5.8.0+editor-mode" "git+https://github.com/anmonteiro/merlin.git#anmonteiro/editor-mode-prototype"]
+  ["ocaml-index.5.8.0+editor-mode" "git+https://github.com/anmonteiro/merlin.git#anmonteiro/editor-mode-prototype"]
+  ["ocaml-lsp-server.dev" "git+https://github.com/anmonteiro/ocaml-lsp.git#anmonteiro/editor-mode-prototype"]
+  ["lsp.dev" "git+https://github.com/anmonteiro/ocaml-lsp.git#anmonteiro/editor-mode-prototype"]
+  ["jsonrpc.dev" "git+https://github.com/anmonteiro/ocaml-lsp.git#anmonteiro/editor-mode-prototype"]
+]

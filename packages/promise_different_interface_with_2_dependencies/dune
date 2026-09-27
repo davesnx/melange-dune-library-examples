@@ -1,6 +1,6 @@
 ; Different implementations, separate modules (`Promise.re`, `Promise.melange.re`)
-; Different dependencies (`lwt`, `melange.belt melange.js`)
-; Different preprocess (`lwt_ppx`, `melange.ppx`)
+; Native callback queue and JavaScript promises (`melange.belt melange.js`)
+; Melange-only preprocessing (`melange.ppx`)
 ; Different interface (`Promise.rei`, `Promise.melange.rei`)
 
 (library
@@ -8,6 +8,6 @@
  (public_name melange-dune-library-examples.promise)
  (wrapped false)
  (modes :standard melange)
- (melange.libraries melange.belt)
+ (melange.libraries melange.belt melange.js)
  (melange.preprocess
   (pps melange.ppx)))
